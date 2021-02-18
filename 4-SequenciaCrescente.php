@@ -32,7 +32,6 @@ function SequenciaCrescente(array $array)
     $original = $array;
     $comparador = $array;
     $tamanho = count($array);
-    $false = [];
 
     for ($contador = 0; $contador < $tamanho; $contador++) {
         unset($array[$contador]);
