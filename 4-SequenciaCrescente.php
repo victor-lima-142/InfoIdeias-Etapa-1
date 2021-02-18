@@ -24,7 +24,7 @@
 // [3, 5, 67, 98, 3] true
 
 
-$array = [1, 3, 2, 1];
+$array = [1, 3, 2];
 SequenciaCrescente($array);
 
 function SequenciaCrescente(array $array)
@@ -32,9 +32,7 @@ function SequenciaCrescente(array $array)
     $original = $array;
     $comparador = $array;
     $tamanho = count($array);
-    $true = [];
     $false = [];
-
 
     for ($contador = 0; $contador < $tamanho; $contador++) {
         unset($array[$contador]);
@@ -50,18 +48,15 @@ function SequenciaCrescente(array $array)
             exit();
         } else {
             if ($array_reindexado == $array_reindexado2 && count($array_sem_repeticao) == count($array_reindexado)) {
-                array_push($true, $contador);
+                echo "true";
+                exit();
             } else {
                 array_push($false, $contador);
             }
-            $array = $original;
-            $comparador = $original;
         }
-    }
 
-    if (count($true) <= 0) {
-        echo "false";
-    } else {
-        echo "true";
+        $array = $original;
+        $comparador = $original;
     }
+    echo "false";
 }
