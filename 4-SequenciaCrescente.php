@@ -23,6 +23,7 @@
 // [123, -17, -5, 1, 2, 3, 12, 43, 45] true
 // [3, 5, 67, 98, 3] true
 
+//Consertado
 
 $array = [1, 3, 2];
 SequenciaCrescente($array);
@@ -32,6 +33,7 @@ function SequenciaCrescente(array $array)
     $original = $array;
     $comparador = $array;
     $tamanho = count($array);
+    $false = [];
 
     for ($contador = 0; $contador < $tamanho; $contador++) {
         unset($array[$contador]);
